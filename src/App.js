@@ -1,22 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/header";
+import TeamDirectory from "./screens/TeamDirectory";
+import { Container } from "@mui/material";
+import "./App.css";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Header />
+        <Container
+          sx={{ marginTop: { md: "10%", sm: "10%", xs: "20%", lg: "8%" } }}
         >
-          Learn React
-        </a>
+          <TeamDirectory />
+        </Container>
       </header>
     </div>
   );
